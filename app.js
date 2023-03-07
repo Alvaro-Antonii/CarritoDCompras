@@ -74,7 +74,8 @@ const pintarCarrito = () =>{
     
     Object.values(arrayProducto).forEach( producto =>{
         
-        carrito.querySelector("th").textContent = producto.id;
+        // carrito.querySelector("th").textContent = producto.id;
+        carrito.querySelector("img").setAttribute("src",producto.thumbnailUrl);
         carrito.querySelectorAll("td")[0].textContent = producto.title;
         carrito.querySelectorAll("td")[1].textContent = producto.cantidad;
         carrito.querySelectorAll("td")[3].textContent = producto.precio*producto.cantidad;
@@ -168,4 +169,18 @@ const botMas = () =>{
     
 }
 
+//////////////Mostrar carrito//////////////
 
+const mostCarro = document.querySelector(".botCarrito")
+const vistaCarro = document.querySelector(".carrito")
+mostCarro.addEventListener("click",()=>{
+    vistaCarro.style.display = "flex"
+})
+
+/////////////////Cerrar carrito///////////////////
+
+const butCerrar = document.querySelector(".butonCerrar")
+
+butCerrar.addEventListener("click",()=>{
+    vistaCarro.style.display = "none"
+})
