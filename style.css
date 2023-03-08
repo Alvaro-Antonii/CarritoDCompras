@@ -1,6 +1,7 @@
 .carrito{
     width: 80%;
-    background-color: black;
+    background-color: rgb(43, 42, 94);
+    border-radius:15px;
     color: aliceblue;
     display: none;
     flex-direction: column;
@@ -14,4 +15,30 @@
 }
 td, th {
     color: aliceblue;
+}
+.botCarrito{
+    font-size: 30px;
+    text-decoration: none;
+    border-radius:15px;
+    outline:none;
+}
+.header{
+    display: flex;
+    max-width: 100%;
+    height: 80vh;
+    background-image: url(img/imagen-head.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.numCarrito{
+    font-size: 12px;
+    padding: 4px;
+    top: 37px;
+    right: 120px;
+    position: absolute;
+    color: aliceblue;
+    border-radius:50%;
+    background-color: red;
+    display:none
 }

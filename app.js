@@ -54,7 +54,7 @@ const detBotones = (data) =>{
 
             arrayProducto[producto.id] = {...producto};
             
-
+            sumCont()
             pintarCarrito();
 
             })
@@ -123,7 +123,7 @@ const mensajeFooter = () =>{
     const boton = document.querySelector("#vaciar-carrito")
     boton.addEventListener("click", () =>{
         arrayProducto = {}
-        
+        sumCont()
         pintarCarrito()
     })
 
@@ -156,7 +156,7 @@ const botMas = () =>{
             producto.cantidad --
             if(producto.cantidad === 0){
                 delete arrayProducto[btn.dataset.id]
-                
+                sumCont()
             } else{
                 arrayProducto[btn.dataset.id] = {...producto}
                 
@@ -184,3 +184,16 @@ const butCerrar = document.querySelector(".butonCerrar")
 butCerrar.addEventListener("click",()=>{
     vistaCarro.style.display = "none"
 })
+
+
+const contador = document.querySelector("#contador")
+
+const sumCont = () =>{
+    if(Object.values(arrayProducto).length > 0){
+        contador.style.display = "block";
+        contador.innerHTML = Object.values(arrayProducto).length
+    } else{
+        contador.style.display = "none"
+    }
+    
+}
