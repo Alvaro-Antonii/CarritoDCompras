@@ -18,6 +18,17 @@ const fetchData = async () =>{
 }
 
 
+//Analizar situaciòn de botones
+
+//
+
+
+
+////////////////////////////////////////////////////
+
+
+
+
 const contenedorPro = document.querySelector("#contenedor-productos");
 
 const pintar = data =>{
@@ -197,3 +208,4 @@ const sumCont = () =>{
     }
     
 }
+
